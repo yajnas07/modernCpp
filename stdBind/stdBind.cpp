@@ -14,11 +14,14 @@ bool match_substring(const string& str) {
     if (str.find("one") != string::npos) return true;
     return false;
 }
-bool match_substring_generic(const string& str, const string& sub = "one") {
+bool match_substring_generic(const string& str, const string& sub) {
     if (str.find(sub) != string::npos) return true;
     return false;
 }
 
+bool match_exact(const string& str, const string& sub) {
+    return (str == sub);
+}
 
 int main()
 {
@@ -42,6 +45,13 @@ int main()
 
         cout << "Number of string with substrigs " << subs << 
             " = " << std::count_if(input.begin(), input.end(), match_custom);
+
+        //Lambda equivalent, find exact match using Lambda function
+        auto count = count_if(input.begin(), input.end(),
+            [value = subs](const string& str) { return match_exact(str, value); }
+            );
+        cout <<"\nNumber of string exactly match with " << subs << " = " << count << endl;
+
         cout << "\nEnter the substring(ctrl+d or 'done' to exit):";
     }
 
