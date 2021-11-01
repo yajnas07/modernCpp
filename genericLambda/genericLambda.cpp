@@ -11,7 +11,6 @@ public:
     template<typename T>
     T operator()(T lhs, T rhs) { return lhs + rhs; }
     //int operator()(int lhs, int rhs) { return lhs + rhs; }
-
 };
 
 
@@ -30,7 +29,7 @@ int main()
 {
     auto adder_lambda = [](auto v1, auto v2) { return v1 + v2; };
     cout << "4 + 5 = " << adder_lambda(4,5) << endl;
-    cout << "11.5 + 10.6 = " << adder_lambda(11.5,10.6) << endl;
+    cout << "11.5 + 10.7 = " << adder_lambda(11.5,10.7) << endl;
     string s1 = "Hello";
     string s2 = "Worlds";
     std::cout << adder_lambda(s1,s2) << endl;
