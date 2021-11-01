@@ -35,7 +35,7 @@ public:
 	bigint(const char* s) :raw_str(s) {}
 
 	void print()	{
-		cout << "Big int value is:" << raw_str << endl;
+		cout << "Big int value is: " << raw_str << endl;
 	};
 
 };
