@@ -19,6 +19,7 @@ public:
 };
 
 
+
 int main()
 {
 	vector<string> inputs{"aishi-sanjay", "aishitishyasanjay", "aishitishya", "tishyaaishi", "hi"};
@@ -36,6 +37,7 @@ int main()
 		cout << "None of the strings in input contain " << substring << endl;
 	}
 
+	
 
 	//Now if found also report the position at which the substring is found
 	auto index = string::npos;
